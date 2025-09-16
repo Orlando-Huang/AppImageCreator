@@ -1,0 +1,2 @@
+# AppImageCreator
+Creates AppImages
