@@ -54,7 +54,7 @@ exec "$this_dir"/usr/bin/{name} "$@"
         open(f"{appDir}/{os.path.basename(file)}", 'wb').write(open(file, 'rb').read())
     print("Building AppImage...")
     result = None if nothing else subprocess.run(f"{os.path.join(os.path.dirname(os.path.abspath(__file__)), "appimagetool.AppImage")} {appDir} {name}.AppImage", shell=True, capture_output=True)
-    subprocess.run(f"rm -rf {appDir}", shell=True)
+    if result: subprocess.run(f"rm -rf {appDir}", shell=True)
     if result and result.returncode: returnError("ERROR: BUILD ERROR, CHECK IF FILE IN USE!")
 
 if __name__=='__main__':
