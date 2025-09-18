@@ -1,0 +1,6 @@
+#!/bin/sh
+set -e
+nuitka AppImageCreatorCLI.py && echo "AppImageCreatorCLI Done Compiling!"
+fyne build --output AppImageCreatorGUI && echo "AppImageCreatorGUI Done Compiling!"
+./AppImageCreatorCLI -n:AppImageCreatorCLI -i:appimage.png -m:AppImageCreatorCLI
+./AppImageCreatorCLI -n:AppImageCreatorGUI -i:appimage.png -m:AppImageCreatorGUI AppImageCreatorCLI
