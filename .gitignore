@@ -2,5 +2,5 @@
 *.dist
 *.onefile-build
 *.AppDir
-CreatedAppImages
+app
 AppImageCreator*.AppImage

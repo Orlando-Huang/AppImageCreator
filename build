@@ -1,7 +1,17 @@
 #!/bin/sh
 set -e
+onexit() {
+    rm -f AppImageCreatorCLI AppImageCreatorGUI
+    rm -rf *.build
+    rm -rf *.dist
+    rm -rf *.onefile-build
+    rm -rf *.AppDir
+    cd ..
+}
+trap onexit EXIT
+cd src
 nuitka AppImageCreatorCLI.py && echo "AppImageCreatorCLI Done Compiling!"
 fyne build --output AppImageCreatorGUI && echo "AppImageCreatorGUI Done Compiling!"
-./AppImageCreatorCLI -n:AppImageCreatorCLI -i:appimage.png -m:AppImageCreatorCLI
-./AppImageCreatorCLI -n:AppImageCreatorGUI -i:appimage.png -m:AppImageCreatorGUI AppImageCreatorCLI
-rm AppImageCreatorCLI AppImageCreatorGUI
+./AppImageCreatorCLI -n:AppImageCreatorCLI -i:../icons/appimage.png -m:AppImageCreatorCLI -t
+./AppImageCreatorCLI -n:AppImageCreatorGUI -i:../icons/appimage.png -m:AppImageCreatorGUI AppImageCreatorCLI
+mv *.AppImage ../app
