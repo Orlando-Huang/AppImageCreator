@@ -11,7 +11,7 @@ Usage: `AppImageCreatorCLI.AppImage [-h] [-n|-N|--name:<name>] [-i|-I|--icon:<ic
 Creates the AppDir only if no arguments passed!
 
 Positional arguments:<br>
-    `data files: You can have none of these, or infinite. These are the files your binary depends on.`
+    `data files: These are the files your binary depends on.`
                 
 Optional arguments:<br>
     `-h, -H, --help: Show this help message`<br>
