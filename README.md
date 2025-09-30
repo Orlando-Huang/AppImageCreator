@@ -10,15 +10,15 @@ Usage: `AppImageCreatorCLI.AppImage [-h] [-n|-N|--name:<name>] [-i|-I|--icon:<ic
 
 Creates the AppDir only if no arguments passed!
 
-Positional arguments:
+Positional arguments:<br>
     data files: You can have none of these, or infinite. These are the files your binary depends on.
                 
-Optional arguments:
-    -h, -H, --help: Show this help message
-    -n, -N, --name: Name of AppImage
-    -i, -I, --icon: Icon for AppImage
-    -m, -M, --main: Main Binary of AppImage
-    -t, -T, --terminal: Terminal app
+Optional arguments:<br>
+    -h, -H, --help: Show this help message<br>
+    -n, -N, --name: Name of AppImage<br>
+    -i, -I, --icon: Icon for AppImage<br>
+    -m, -M, --main: Main Binary of AppImage<br>
+    -t, -T, --terminal: Terminal app<br>
     -v, -V, --verbose: Verbose output
 
 ## AppImageCreatorGUI
