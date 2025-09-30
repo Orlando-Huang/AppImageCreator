@@ -6,7 +6,7 @@ Creates AppImages using [AppImageTool](https://github.com/AppImage/appimagetool)
 ## AppImageCreatorCLI
 **This is a CLI version of AppImageCreator.**
 
-Usage: AppImageCreatorCLI.AppImage [-h] [-n|-N|--name:<name>] [-i|-I|--icon:<icon>] [-m|-M|--main:<main binary>] <data files>
+Usage: AppImageCreatorCLI.AppImage [-h] [-n|-N|--name:<name>] [-i|-I|--icon:<icon>] [-m|-M|--main:<main binary>] [-t|-T|--terminal] [-v|-V|--verbose] <data files>
 
 Creates the AppDir only if no arguments passed!
 
@@ -18,6 +18,8 @@ Optional arguments:
     -n, -N, --name: Name of AppImage
     -i, -I, --icon: Icon for AppImage
     -m, -M, --main: Main Binary of AppImage
+    -t, -T, --terminal: Terminal app
+    -v, -V, --verbose: Verbose output
 
 ## AppImageCreatorGUI
 **This is a GUI version of AppImageCreator**
