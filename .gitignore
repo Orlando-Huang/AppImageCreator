@@ -1,6 +1,1 @@
-*.build
-*.dist
-*.onefile-build
-*.AppDir
 app
-AppImageCreator*.AppImage
