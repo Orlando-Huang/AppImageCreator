@@ -66,7 +66,6 @@ if __name__=='__main__':
     terminal = False
     verbose = False
     datafiles = []
-    unknownFlags = []
     nothing = False if args else True
     for token in args:
         match token:
@@ -84,5 +83,4 @@ if __name__=='__main__':
                 icon = value if value.endswith('.png') else returnError("ERROR: FILE IS NOT '.png' IMAGE FILE!")
             case [single]:
                 datafiles.append(single)
-    if unknownFlags: returnWarning(f"WARNING: Unknown Flags: {' '.join(unknownFlags)}")
     main(name, icon, binary, datafiles, terminal, verbose, nothing)
